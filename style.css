@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ff4d6d;
+    /* watermelon pink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.watermelon {
+    font-size: 120px;
+    transition: transform 0.6s ease;
+}
+
+button {
+    padding: 14px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#crackBtn {
+    background: #2ecc71;
+    /* watermelon green */
+    color: white;
+}
+
+#yesBtn {
+    background: #2ecc71;
+    color: white;
+}
+
+#noBtn {
+    background: #1b5e20;
+    color: white;
+    position: relative;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.heart {
+    position: absolute;
+    font-size: 24px;
+    pointer-events: none;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--x), var(--y)) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.floating {
+    position: absolute;
+    font-size: 22px;
+    pointer-events: none;
+    animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-800px);
+        opacity: 0;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    20% {
+        transform: translate(-4px, 2px);
+    }
+
+    40% {
+        transform: translate(4px, -2px);
+    }
+
+    60% {
+        transform: translate(-3px, 1px);
+    }
+
+    80% {
+        transform: translate(3px, -1px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.shake {
+    animation: shake 0.4s ease;
+}
+
+/* Wiggle */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(6deg);
+    }
+
+    50% {
+        transform: rotate(-6deg);
+    }
+
+    75% {
+        transform: rotate(4deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.wiggle {
+    animation: wiggle 0.4s ease;
+}
+
+/* Glow */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #2ecc71;
+    }
+
+    50% {
+        box-shadow: 0 0 25px #2ecc71;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #2ecc71;
+    }
+}
+
+.glow {
+    animation: glow 1.5s infinite;
+}
+
+/* Destiny meter */
+#destinyMeter {
+    position: absolute;
+    bottom: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#barFill {
+    width: 0%;
+    height: 100%;
+    background: #2ecc71;
+    transition: width 0.3s ease;
+}
+
+/* Seeds */
+.seed {
+    position: absolute;
+    font-size: 14px;
+    animation: floatUp 3s linear forwards;
+}

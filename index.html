@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Watermelon Valentine 🍉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SCREEN 1 -->
+    <!-- INTRO SCREEN -->
+    <div id="intro" class="center">
+
+        <div id="warningBox">
+            <h2>⚠️ Warning</h2>
+            <p>This watermelon contains intense feelings.</p>
+            <button id="proceedBtn">Proceed anyway 🍉</button>
+            <button id="scaredBtn">I'm scared</button>
+        </div>
+
+        <div id="melonSection" class="hidden">
+            <p id="melonMessage">Hover the watermelon...</p>
+            <div id="watermelon" class="watermelon">🍉</div>
+            <button id="crackBtn">Crack Me Open 🍉</button>
+        </div>
+
+    </div>
+
+    <!-- Destiny Meter -->
+    <div id="destinyMeter" class="hidden">
+        <p>Destiny Override: <span id="destinyPercent">0</span>%</p>
+        <div class="bar">
+            <div id="barFill"></div>
+        </div>
+    </div>
+
+
+    <!-- SCREEN 2 -->
+    <div id="questionScreen" class="center hidden">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button id="yesBtn">Yes 💚</button>
+            <button id="noBtn">No 💔</button>
+        </div>
+    </div>
+
+    <!-- FINAL SCREEN -->
+    <div id="finalScreen" class="center hidden">
+        <h1 id="systemText"></h1>
+        <p id="systemSub"></p>
+    </div>
+
+
+
+    <audio id="song">
+        <source src="watermelon.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
